@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="Style.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="Container">
+        <h1 style="color:rgb(101, 63, 13)">Drawing App</h1>
+       
+        <div class="tools">
+           
+            <button onClick="HandleUndo()" class="button">Undo</button>
+            <div onClick="HandleColor(this)" class="color-picker" style="background: yellow;"></div>
+            <div onClick="HandleColor(this)"  class="color-picker" style="background: red;"></div>
+            <div onClick="HandleColor(this)"  class="color-picker" style="background: green;"></div>
+            <div onClick="HandleColor(this)"  class="color-picker" style="background: blue;"></div>
+            <div onClick="HandleColor(this)"  class="color-picker" style="background: rgb(212, 75, 12);"></div>
+            <div onClick="HandleColor(this)"  class="color-picker" style="background: rgb(24, 104, 161);"></div>
+            <div onClick="HandleColor(this)"  class="color-picker" style="background: rgb(212, 12, 182);"></div>
+            <div onClick="HandleColor(this)"  class="color-picker" style="background: rgb(116, 239, 183);"></div>
+            
+            <input type="range"  min="1"  max="100" class="pen-range" onInput="draw_width=this.value">
+            <button onClick="HandleClear()" class="button">Clear</button>
+
+         </div>
+         <div><canvas id="mycanvas">
+        </canvas></div>
+   
+
+    </div>
+    <script src="Script.js"></script>
+</body>
+</html>

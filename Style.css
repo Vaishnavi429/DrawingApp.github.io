@@ -1,0 +1,54 @@
+   body {
+       background: rgb(201, 191, 191);
+       overflow: hidden;
+   }
+
+   .Container {
+      
+       width: 100vw;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+
+   }
+
+
+   canvas {
+       cursor: pointer;
+       border: 2px solid black;
+       /* background: white; */
+
+
+
+
+   }
+
+   .tools {
+      display: flex;
+      align-self: center;
+      row-gap: 5px;
+   }
+
+   .tools .color-picker {
+       height: 20px;
+       width: 20px;
+       border: 2px solid white;
+       cursor: pointer;
+       display: inline-block;
+       border-radius: 50%;
+       align-self: center;
+       margin-left: 5px;
+
+   }
+
+   .tools .button {
+       background-color: rgb(5, 87, 98);
+       box-sizing: border-box;
+       padding: 3px 15px;
+       margin-bottom: 3px;
+       color: aliceblue;
+       border: 5px double rgb(192, 170, 170);
+
+       
+   }
