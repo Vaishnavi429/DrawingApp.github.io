@@ -1,6 +1,6 @@
 let mycanvas =document.getElementById('mycanvas');
 mycanvas.width =innerWidth-100;
-mycanvas.height = innerHeight-100;
+mycanvas.height = innerHeight-80;
 
 
 let context =mycanvas.getContext("2d")

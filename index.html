@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="Style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 </head>
-<body>
-    
-    <div class="Container">
-        <h1 style="color:rgb(101, 63, 13)">Drawing App</h1>
-       
-        <div class="tools">
-           
-            <button onClick="HandleUndo()" class="button">Undo</button>
-            <div onClick="HandleColor(this)" class="color-picker" style="background: yellow;"></div>
-            <div onClick="HandleColor(this)"  class="color-picker" style="background: red;"></div>
-            <div onClick="HandleColor(this)"  class="color-picker" style="background: green;"></div>
-            <div onClick="HandleColor(this)"  class="color-picker" style="background: blue;"></div>
-            <div onClick="HandleColor(this)"  class="color-picker" style="background: rgb(212, 75, 12);"></div>
-            <div onClick="HandleColor(this)"  class="color-picker" style="background: rgb(24, 104, 161);"></div>
-            <div onClick="HandleColor(this)"  class="color-picker" style="background: rgb(212, 12, 182);"></div>
-            <div onClick="HandleColor(this)"  class="color-picker" style="background: rgb(116, 239, 183);"></div>
-            
-            <input type="range"  min="1"  max="100" class="pen-range" onInput="draw_width=this.value">
-            <button onClick="HandleClear()" class="button">Clear</button>
 
-         </div>
-         <div><canvas id="mycanvas">
-        </canvas></div>
-   
+<body>
+
+
+    
+        <nav class="navbar navbar-expand-lg" style="background: rgb(191, 165, 165)">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">FunPaint</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="tools">
+                    <div onClick="HandleColor(this)" class="color-picker" style="background: yellow;"></div>
+                    <div onClick="HandleColor(this)" class="color-picker" style="background: red;"></div>
+                    <div onClick="HandleColor(this)" class="color-picker" style="background: green;"></div>
+                    <div onClick="HandleColor(this)" class="color-picker" style="background: blue;"></div>
+                    <div onClick="HandleColor(this)" class="color-picker" style="background: rgb(212, 75, 12);"></div>
+                    <div onClick="HandleColor(this)" class="color-picker" style="background: rgb(24, 104, 161);"></div>
+                    <div onClick="HandleColor(this)" class="color-picker" style="background: rgb(212, 12, 182);"></div>
+                    <div onClick="HandleColor(this)" class="color-picker" style="background: rgb(116, 239, 183);"></div>
+                    <input type="range" min="1" max="100" class="pen-range" onInput="draw_width=this.value">
+                </div>
+                <form class="d-flex" role="search">
+                    <button onClick="HandleUndo()" class="button">Undo</button>
+                    <button onClick="HandleClear()" class="button">Clear</button>
+                </form>
+            </div>
+    </div>
+    </nav>
+    <div class="Container">
+    <canvas id="mycanvas">
+        </canvas>
+
 
     </div>
     <script src="Script.js"></script>
 </body>
+
 </html>
